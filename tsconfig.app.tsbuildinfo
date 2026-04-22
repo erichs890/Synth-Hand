@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/audio/audiosynthengine.ts","./src/components/settingspanel.tsx","./src/hooks/useaudiosynth.ts","./src/hooks/usehandtracking.ts","./src/hooks/useradialmenu.ts","./src/lib/settings.ts"],"version":"5.6.3"}

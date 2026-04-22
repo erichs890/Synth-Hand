@@ -14,7 +14,7 @@ export interface HandData {
 export type TrackingStatus = "idle" | "loading" | "ready" | "error";
 
 export interface UseHandTrackingResult {
-  videoRef: React.RefObject<HTMLVideoElement | null>;
+  videoRef: React.RefObject<HTMLVideoElement>;
   status: TrackingStatus;
   error: string | null;
   left: HandData;
@@ -29,7 +29,7 @@ const MODEL_URL =
   "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task";
 
 export function useHandTracking(): UseHandTrackingResult {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [status, setStatus] = useState<TrackingStatus>("idle");
   const [error, setError] = useState<string | null>(null);
   const [left, setLeft] = useState<HandData>(EMPTY_HAND);
